@@ -36,6 +36,13 @@ function createCartItem(name, price){
   quantityInput.min = '1';
   quantityInput.value = '1';
   quantityInput.dataset.previous = '1';
+  quantityInput.addEventListener('input', function() {
+    const newQuantity = parseInt(quantityInput.value);
+    const oldQuantity = parseInt(quantityInput.dataset.previous);
+    const diff = newQuantity - oldQuantity;
+    updateTotalPrice(price * diff);
+    quantityInput.dataset.previous = newQuantity;
+  });
 
   const removeBtn = document.createElement('button');
   removeBtn.innerText = 'Remove';
