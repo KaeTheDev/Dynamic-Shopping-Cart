@@ -46,6 +46,13 @@ function createCartItem(name, price){
 
   const removeBtn = document.createElement('button');
   removeBtn.innerText = 'Remove';
+  removeBtn.addEventListener('click', function(event) {
+    removeItem(event);
+    if (cart.children.length === 0) {
+    totalPrice = 0;
+      totalPriceSpan.textContent = totalPrice.toFixed(2);
+  }
+  });
 
   cartItem.append(nameSpan, priceSpan, quantityInput, removeBtn);
   return cartItem;
