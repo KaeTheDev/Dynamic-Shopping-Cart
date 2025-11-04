@@ -87,3 +87,24 @@ This lab can be completed on  **Windows**,  **macOS**, or  **Linux**.
     -   Open  `index.html`  in VS Code.
         
     -   Right-click and select  **“Open with Live Server.”**
+
+    ## REFLECTION
+1. How did you dynamically create and append new elements to the DOM?
+
+I created a separate createCartItem function that deals with creating the items, using createElement for the different
+HTML Elements, for the cart and appending it to the cart unordered list.
+
+2. What steps did you take to ensure accurate updates to the total price?
+
+I added each functionality one by one and tested the total as I went. I made sure the total was updated when a new item was added and 
+that it went back to 0 when the item was completely removed. I, then, made sure that the project could handle adding the same item while
+properly updating the total. 
+
+3. How did you handle invalid input for product name or price?
+I did simple check for empty strings in the input field. And I checked to make sure that the price could not be NaN or less than 0 using
+a conditional. 
+
+4. What challenges did you face when implementing the remove functionality?
+
+The only challenge I had initially was getting the total to update correct once the item was removed. But I figured out how to utilize
+the function that was given to me. 
