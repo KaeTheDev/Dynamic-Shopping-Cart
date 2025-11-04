@@ -29,3 +29,7 @@ body {
 .cart-item button {
   margin-left: 10px;
 }
+
+span {
+  margin-right: .5rem;
+}
