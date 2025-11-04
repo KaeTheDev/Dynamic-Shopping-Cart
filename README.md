@@ -1,5 +1,5 @@
 
-# LAB – Dynamic Shopping Cart
+# LAB 5.1 – Dynamic Shopping Cart
 
 ## Overview
 
