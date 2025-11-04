@@ -37,7 +37,10 @@ function createCartItem(name, price){
   quantityInput.value = '1';
   quantityInput.dataset.previous = '1';
 
-  cartItem.append(nameSpan, priceSpan, quantityInput);
+  const removeBtn = document.createElement('button');
+  removeBtn.innerText = 'Remove';
+
+  cartItem.append(nameSpan, priceSpan, quantityInput, removeBtn);
   return cartItem;
 }
 
