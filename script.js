@@ -41,4 +41,7 @@ addProductButton.addEventListener("click", function(){
 
   const cartItem = createCartItem(name, price);
   cart.appendChild(cartItem);
+
+  productNameInput.value = '';
+  productPriceInput.value = '';
 })
