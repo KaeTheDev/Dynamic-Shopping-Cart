@@ -30,7 +30,14 @@ function createCartItem(name, price){
   const priceSpan = document.createElement('span');
   priceSpan.textContent = `$${price.toFixed(2)}`;
 
-  cartItem.append(nameSpan, priceSpan);
+    
+  const quantityInput = document.createElement('input');
+  quantityInput.type = 'number';
+  quantityInput.min = '1';
+  quantityInput.value = '1';
+  quantityInput.dataset.previous = '1';
+
+  cartItem.append(nameSpan, priceSpan, quantityInput);
   return cartItem;
 }
 
