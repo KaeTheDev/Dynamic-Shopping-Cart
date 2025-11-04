@@ -63,6 +63,17 @@ addProductButton.addEventListener("click", function(){
   const priceInput = productPriceInput.value.trim();
   const price = parseFloat(priceInput);
 
+
+  if(name === "" || priceInput === ""){
+    alert("Please Enter Values!")
+    return;
+}
+
+if (isNaN(price) || price <= 0) {
+    alert("Please enter a valid positive price!");
+    return;
+}
+
   const cartItem = createCartItem(name, price);
   cart.appendChild(cartItem);
 
