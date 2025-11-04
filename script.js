@@ -19,3 +19,26 @@ function removeItem(event) {
   updateTotalPrice(-price);
   item.remove();
 }
+
+function createCartItem(name, price){
+  const cartItem = document.createElement('li');
+  cartItem.dataset.price = price;
+
+  const nameSpan = document.createElement('span');
+  nameSpan.textContent = name;
+
+  const priceSpan = document.createElement('span');
+  priceSpan.textContent = `$${price.toFixed(2)}`;
+
+  cartItem.append(nameSpan, priceSpan);
+  return cartItem;
+}
+
+addProductButton.addEventListener("click", function(){
+  const name = productNameInput.value.trim();
+  const priceInput = productPriceInput.value.trim();
+  const price = parseFloat(priceInput);
+
+  const cartItem = createCartItem(name, price);
+  cart.appendChild(cartItem);
+})
